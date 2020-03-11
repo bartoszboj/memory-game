@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    margin: 3vh auto;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: rgb(104,188,250);
+    background: linear-gradient(90deg, rgba(104,188,250,1) 11%, rgba(187,196,239,1) 40%, rgba(196,198,226,1) 55%, rgba(210,200,222,1) 65%, rgba(216,201,220,1) 77%, rgba(224,202,218,1) 89%, rgba(252,205,211,1) 100%);
+}
+
+.menu{
+    width: 640px;
+    margin: auto;
+    display: flex;
+}
+
+.score-board, .restart-game {
+    order: 0;
+    width: 45%;
+    margin: 10px auto;
+    padding: 10px 40px;
+    border-radius: 30px;
+    user-select: none;
+    text-align: center;
+    font-family: 'roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 2px;
+    box-shadow: 5px 4px 15px rgb(0, 0, 0, .3);
+    cursor: default;
+    /* border: 2px solid deeppink; */
+    transform: scale(1);
+    /* box-shadow: 3px 3px 20px 5px rgb(250, 206, 243); */
+}
+
+.restart-game{
+    cursor: pointer;
+    /* box-shadow: none; */
+}
+
+.restart-game:active{
+    transform: scale(0.97);
+    transition: transform .1s;
+}
+
+.restart-game:hover{
+    transform: scale(1.03);
+    transition: 0.2s;
+}
+
+.game-board{
+    perspective: 10000px;
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1500px;
+    /* background-color: #ffb48f; */
+}
+
+.memory-card{
+    cursor: pointer;
+    position: relative;
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    /* border: 2px solid aqua; */
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .3s ease;
+    
+}
+.memory-card:active{
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card:hover{
+    transform: scale(1.03);
+}
+
+.memory-card.flip{
+    transform: rotateY(180deg) translateZ(20px);
+}
+
+.avers, .revers{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: 5px 4px 15px rgb(0, 0, 0, .3);
+    backface-visibility: hidden;
+}
+.avers{
+    transform: rotateY(180deg) translateZ(20px);
+}
+
+
