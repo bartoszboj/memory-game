@@ -15,7 +15,7 @@ body{
 }
 
 .menu{
-    width: 640px;
+    width: 80vh;
     margin: auto;
     display: flex;
 }
@@ -57,9 +57,10 @@ body{
 }
 
 .game-board{
-    perspective: 10000px;
-    width: 640px;
-    height: 640px;
+    perspective: 1000px;
+    width: 80vh;
+    height: 80vh;
+    /* height: 640px; */
     margin: auto;
     display: flex;
     flex-wrap: wrap;
